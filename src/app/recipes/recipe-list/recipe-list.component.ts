@@ -10,10 +10,10 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
 recipes: Recipe[] =[
-   new Recipe ('milad',
+   new Recipe ('Milad',
   'this is a simple recipe',
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTivP1llSFce8ZXlwKRnZrQwJozQtyRDwKfscSxcKMvkUaGZ1fY'),
-  new Recipe ('milad',
+  new Recipe ('Sia',
   'this is a simple recipe',
   'https://www.underconsideration.com/brandnew/archives/firefox_2017_logo.jpg')
 ];
