@@ -9,7 +9,7 @@ import { Ingredient } from '../shared/Ingredient.model';
 })
 export class ShoppingListComponent implements OnInit {
 
-  ingeridients: Ingredient [] = [
+  ingredients: Ingredient [] = [
   new Ingredient('Apple', 5),
   new Ingredient('banana', 4)
   ];
@@ -17,6 +17,14 @@ export class ShoppingListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onIngredientAdded(ingredient:Ingredient){
+      this.ingredients.push(ingredient);
+  }
+  itemToDeleted(ingredient:Ingredient){
+    const indexIng = this.ingredients.indexOf(ingredient);
+    this.ingredients.splice(indexIng,1);
   }
 
 }
