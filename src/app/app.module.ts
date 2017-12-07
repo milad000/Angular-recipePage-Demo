@@ -11,6 +11,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { AutoMarginDirective } from './Directives/auto-margin.directive';
+import { DropDownMenuDirective } from './Directives/drop-down-menu.directive';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AutoMarginDirective } from './Directives/auto-margin.directive';
     RecipeListComponent,
     ShoppingEditComponent,
     RecipeItemComponent,
-    AutoMarginDirective
+    AutoMarginDirective,
+    DropDownMenuDirective
   ],
   imports: [
     BrowserModule
