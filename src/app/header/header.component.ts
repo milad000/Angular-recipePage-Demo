@@ -11,7 +11,7 @@ itemSelected:string = 'recipe';
 
 onSelect(feature:string){
   this.featureSelected.emit(feature);
-  if(feature == 'recipe'){
+  if(feature === 'recipe'){
     this.itemSelected = 'recipe';
 }else{
     this.itemSelected = 'shopping-list';
