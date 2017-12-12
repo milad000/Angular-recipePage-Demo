@@ -16,24 +16,24 @@ import { ShoppingService } from './shopping-list/shopping-list.service';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    RecipesComponent,
-    ShoppingListComponent,
-    RecipeDetailComponent,
-    RecipeListComponent,
-    ShoppingEditComponent,
-    RecipeItemComponent,
-    AutoMarginDirective,
-    DropDownMenuDirective
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [
-  ShoppingService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        RecipesComponent,
+        ShoppingListComponent,
+        RecipeDetailComponent,
+        RecipeListComponent,
+        ShoppingEditComponent,
+        RecipeItemComponent,
+        AutoMarginDirective,
+        DropDownMenuDirective
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [
+        ShoppingService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

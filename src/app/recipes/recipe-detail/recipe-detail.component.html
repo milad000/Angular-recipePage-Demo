@@ -1,41 +1,41 @@
 <div class="row">
-  <div class="col-xs-12">
-    <img appAutoMargin src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-responsive">
-  </div>
+	<div class="col-xs-12">
+		<img appAutoMargin src="{{recipe.imagePath}}" alt="{{recipe.name}}"
+			class="img-responsive">
+	</div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    <h1>{{ recipe.name }}</h1>
-  </div>
+	<div class="col-xs-12">
+		<h1>{{ recipe.name }}</h1>
+	</div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    <div appDropDownMenu class="btn-group">
-      <button class="btn btn-primary dropdown-toggle" type="button">
-        Manage Recipe <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a (click)="onAddIngredientToShopping()" style="cursor:pointer">To shopping List</a></li>
-        <li><a >Edit Recipe</a></li>
-        <li><a >Delete Recipe</a></li>
-      </ul>
-    </div>
-  </div>
+	<div class="col-xs-12">
+		<div appDropDownMenu class="btn-group">
+			<button class="btn btn-primary dropdown-toggle" type="button">
+				Manage Recipe <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a (click)="onAddIngredientToShopping()"
+					style="cursor: pointer">To shopping List</a></li>
+				<li><a>Edit Recipe</a></li>
+				<li><a>Delete Recipe</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
 <hr>
 <div class="row">
-  <div class="col-xs-12">
-    <li class="list-group-item">
-      {{recipe.description}}
-    </li>
-  </div>
+	<div class="col-xs-12">
+		<li class="list-group-item">{{recipe.description}}</li>
+	</div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    <ul class="list-group">
-      <li *ngFor="let ingredient of recipe.ingredients" class="list-group-item">
-        {{ingredient.name}} : {{ingredient.amount}}
-      </li>
-    </ul>
-  </div>
+	<div class="col-xs-12">
+		<ul class="list-group">
+			<li *ngFor="let ingredient of recipe.ingredients"
+				class="list-group-item">{{ingredient.name}} :
+				{{ingredient.amount}}</li>
+		</ul>
+	</div>
 </div>

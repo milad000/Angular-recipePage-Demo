@@ -1,34 +1,34 @@
-import { Component, OnInit,ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import {Ingredient} from '../../shared/Ingredient.model';
 
 import {ShoppingService} from '../shopping-list.service';
 
 @Component({
-  selector: 'app-shopping-edit',
-  templateUrl: './shopping-edit.component.html',
-  styleUrls: ['./shopping-edit.component.css']
+    selector: 'app-shopping-edit',
+    templateUrl: './shopping-edit.component.html',
+    styleUrls: ['./shopping-edit.component.css']
 })
 export class ShoppingEditComponent implements OnInit {
-  @ViewChild('inputName') nameInputRef: ElementRef;
-  @ViewChild('inputAmount') amountInputRef: ElementRef;
+    @ViewChild('inputName') nameInputRef: ElementRef;
+    @ViewChild('inputAmount') amountInputRef: ElementRef;
 
 
 
-  constructor(private shoppingService:ShoppingService) { }
+    constructor(private shoppingService: ShoppingService) { }
 
-  ngOnInit() {
-  }
-  onAddData(){
-    const ingName = this.nameInputRef.nativeElement.value;
-    const ingAmount = this.amountInputRef.nativeElement.value;
-    const newIngredient = new Ingredient(ingName,ingAmount);
-    this.shoppingService.addIngredient(newIngredient);
+    ngOnInit() {
+    }
+    onAddData() {
+        const ingName = this.nameInputRef.nativeElement.value;
+        const ingAmount = this.amountInputRef.nativeElement.value;
+        const newIngredient = new Ingredient(ingName, ingAmount);
+        this.shoppingService.addIngredient(newIngredient);
 
-  }
+    }
 
-  onClearData(){
-    this.nameInputRef.nativeElement.value = '';
-    this.amountInputRef.nativeElement.value = '';
-  }
+    onClearData() {
+        this.nameInputRef.nativeElement.value = '';
+        this.amountInputRef.nativeElement.value = '';
+    }
 }
