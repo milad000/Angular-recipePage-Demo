@@ -12,6 +12,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { AutoMarginDirective } from './Directives/auto-margin.directive';
 import { DropDownMenuDirective } from './Directives/drop-down-menu.directive';
+import { ShoppingService } from './shopping-list/shopping-list.service';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { DropDownMenuDirective } from './Directives/drop-down-menu.directive';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+  ShoppingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
