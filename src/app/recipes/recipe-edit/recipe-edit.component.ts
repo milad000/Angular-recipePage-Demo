@@ -27,7 +27,7 @@ export class RecipeEditComponent implements OnInit {
       }
     );
   }
-    onSubtit(){
+    onSubmit(){
         console.log(this.recipeForm);
     }
     
