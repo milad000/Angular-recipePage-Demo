@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {HttpModule} from '@angular/http';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 
@@ -15,6 +16,8 @@ import {AutoMarginDirective} from './Directives/auto-margin.directive';
 import {DropDownMenuDirective} from './Directives/drop-down-menu.directive';
 import {AppRoutingModule} from './app-routing.module';
 import {ShoppingService} from './shopping-list/shopping-list.service';
+import {RecipeService} from './recipes/recipe.service';
+import {DataStorarageService} from './shared/data-storarage.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
@@ -38,10 +41,13 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [
-    ShoppingService
+    ShoppingService,
+      RecipeService,
+      DataStorarageService
   ],
   bootstrap: [AppComponent]
 })
